@@ -1,0 +1,13 @@
+<resources>
+        <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="moj_styl">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:text">.</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:onClick">kliknieto</item>
+    </style>
+</resources>

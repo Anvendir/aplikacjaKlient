@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/przycisk_obrot"
+        android:id="@+id/button"
+        android:onClick="obracaj"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/przycisk_skala"
+        android:id="@+id/button2"
+        android:onClick="skaluj"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/przycisk_zanik"
+        android:id="@+id/button3"
+        android:onClick="zanikaj"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/button2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/przycisk_przesuw"
+        android:id="@+id/button4"
+        android:onClick="przesuwaj"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/przycisk_wszystko"
+        android:id="@+id/button5"
+        android:onClick="stosuj_wszystko"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="143dp"
+        android:layout_height="2326dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/ryba"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

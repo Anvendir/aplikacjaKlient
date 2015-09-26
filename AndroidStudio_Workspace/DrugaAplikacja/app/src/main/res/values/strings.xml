@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DrugaAplikacja</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="imie">"Imie kota"</string>
+    <string name="wiek">"Wiek kota"</string>
+    <string name="kolor">"Kolor sierści"</string>
+    <string name="napis">"Zaakceptuj"</string>
+    <string name="imie_hint">"Tutaj wpisz imię swojego kotka"</string>
+    <string name="wiek_hint">"Tutaj jego wiek w latach"</string>
+    <string name="kolor_hint">"A tutaj kolor jego futerka</string>
+</resources>

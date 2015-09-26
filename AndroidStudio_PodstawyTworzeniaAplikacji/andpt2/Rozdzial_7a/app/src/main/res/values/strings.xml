@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rozdzial_7a</string>
+    <string name="action_settings">Settings</string>
+    <string name="przycisk_obrot">Obrót</string>
+    <string name="przycisk_skala">Skala</string>
+    <string name="przycisk_zanik">Zanik</string>
+    <string name="przycisk_przesuw">Przesuw</string>
+    <string name="przycisk_wszystko">Stosuj wszystko razem</string>
+</resources>

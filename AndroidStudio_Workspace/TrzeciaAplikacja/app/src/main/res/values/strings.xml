@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TrzeciaAplikacja</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="obrazek">Widok motocykla!</string>
+    <string name="obrazek1">Widok mariackiego!</string>
+</resources>
