@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OsiemnastaAplikacja</string>
+
+    <string name="menu_napis_ISS">Iss</string>
+    <string name="menu_napis_Moon">Księżyc</string>
+    <string name="menu_napis_Sun">Słońce</string>
+    <string name="menu_napis_settings">Inne</string>
+    <string name="title_activity_activity__iss__moon__sun">Activity_ISS_Moon_Sun</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

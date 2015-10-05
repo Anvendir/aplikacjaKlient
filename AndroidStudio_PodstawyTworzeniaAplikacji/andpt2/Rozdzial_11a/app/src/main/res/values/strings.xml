@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Rozdział 11a</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="iss_button">Stacja ISS</string>
+    <string name="iss_napis">Pozycja stacji Kosmicznej ISS</string>
+    <string name="moon_button">Księżyc</string>
+    <string name="moon_napis">Fazy Księżyca</string>
+    <string name="sun_button">Słońce</string>
+    <string name="sun_napis">Plamy na Słońcu</string>
+
+    <string name="title_activity_iss">ISS (heavens-above).</string>
+    <string name="title_activity_moon">Księżyc (USNavy).</string>
+    <string name="title_activity_sun">Słońce (NASA).</string>
+
+    <string name="powrot_button">Powrót</string>
+    <string name="info_napis">Info</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Rozdział 11b.</string>
+
+    <string name="menu_napis_ISS">ISS</string>
+    <string name="menu_napis_Moon">Księżyc</string>
+    <string name="menu_napis_Sun">Słońce</string>
+    <string name="menu_napis_settings">Inne</string>
+
+    <string name="title_activity_iss_moon_sun">ISS, Księżyc, Słońce ...</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

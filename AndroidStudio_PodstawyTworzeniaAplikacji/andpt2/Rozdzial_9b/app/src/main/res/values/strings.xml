@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Rozdzial_9b</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_kreuj">Kreuj</string>
+    <string name="button_czysc">Czyść</string>
+    <string name="button_linie">Linie</string>
+    <string name="button_elipsy">Elipsy</string>
+    <string name="button_prostakaty">Prostokąty</string>
+
+    <string name="text_info">Info</string>
+
+</resources>

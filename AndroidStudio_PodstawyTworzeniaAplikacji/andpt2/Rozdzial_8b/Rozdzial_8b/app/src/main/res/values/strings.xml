@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Rozdzial_8b</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="kolo">koło</string>
+    <string name="elipsa">elipsa</string>
+    <string name="prostokat">prostokąt</string>
+    <string name="prostakat_okragly">prostokąt okrągły</string>
+    <string name="luk">łuk</string>
+    <string name="linia">linia</string>
+</resources>

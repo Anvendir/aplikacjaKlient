@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SiedemnstaAplikacja</string>
+    <string name="action_settings">Settings</string>
+    <string name="iss_button">STACJA ISS</string>
+    <string name="iss_napis">Pozycja stacja kosmicznej ISS</string>
+    <string name="moon_button">KSIĘŻYC</string>
+    <string name="moon_napis">Fazy księżyca</string>
+    <string name="sun_button">SŁOŃCE</string>
+    <string name="sun_napis">Plamy na Słońcu</string>
+
+    <string name="title_activity_ISS">ISS (heaven-above)</string>
+    <string name="title_activity_moon">Moon (USNavy)</string>
+    <string name="title_activity_sun">Sun (NASA)</string>
+
+    <string name="powrot_button">Powrót</string>
+    <string name="info_napis">Info</string>
+    <string name="title_activity_iss">ISS.</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

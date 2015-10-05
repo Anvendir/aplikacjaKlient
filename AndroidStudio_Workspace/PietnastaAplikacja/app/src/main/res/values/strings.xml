@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PietnastaAplikacja</string>
+    <string name="action_settings">Settings</string>
+    <string name="opis">Opis</string>
+    <string name="przyciskStart">Start</string>
+    <string name="obrazekDesc">Obrazek z palmami</string>
+</resources>
