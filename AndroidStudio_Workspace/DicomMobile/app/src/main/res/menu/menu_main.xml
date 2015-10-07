@@ -2,8 +2,38 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".MainActivity">
 
+    <item android:id="@+id/action_opsenFile"
+          android:title="@string/action_opsenFile"
+          android:orderInCategory="1"
+          android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_connectToServer"
+          android:title="@string/action_connectToServer"
+          android:orderInCategory="2"
+          android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_aboutDicom"
+          android:title="@string/action_aboutDicom"
+          android:orderInCategory="10"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_language"
+          android:title="@string/action_language"
+          android:orderInCategory="15"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_aboutApp"
+          android:title="@string/action_aboutApp"
+          android:orderInCategory="20"
+          android:showAsAction="never" />
+
     <item android:id="@+id/action_settings"
           android:title="@string/action_settings"
-          android:orderInCategory="100"
+          android:orderInCategory="300"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_quit"
+          android:title="@string/action_quit"
+          android:orderInCategory="400"
           android:showAsAction="never" />
 </menu>

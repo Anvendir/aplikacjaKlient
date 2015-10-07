@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="pl.kobak.rafal.dicommobile" >
+    package="pl.kobak.rafal.dicommobile" >
 
-    <application android:allowBackup="true"
-                 android:icon="@mipmap/ic_launcher"
-                 android:label="@string/app_name"
-                 android:theme="@style/AppTheme" >
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
 
-        <activity android:name=".MainActivity"
-                  android:label="@string/app_name" >
-
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
-
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
-
         </activity>
 
+        <activity
+            android:name=".AboutDicom"
+            android:label="@string/title_activity_about_dicom"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Language"
+            android:label="@string/title_activity_language"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".AboutApplication"
+            android:label="@string/title_activity_about_application"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".OpenFile"
+            android:label="@string/title_activity_open_file"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ConnectToServer"
+            android:label="@string/title_activity_connect_to_server"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
