@@ -1,0 +1,15 @@
+-> do zrobienia
+1. ekran otworz plik lokalnie
+* pole tekstowe gdzie w rpzyszlosci bedzie lista plikow
+* przyciski otowrz i anuluj
+
+2. ekran otowrz zdalnie
+* pole tekstowe z lista plikow
+* przyciski otowrz oraz anuluj
+
+3. Ekran historia
+
+4. Ekran z towartym plikiem 
+* na calosci obraz
+* w menu na sta³e Metedane oraz Zamknij
+* w menu rozwijanym O pliku, Pe³ne metadane, Rendering

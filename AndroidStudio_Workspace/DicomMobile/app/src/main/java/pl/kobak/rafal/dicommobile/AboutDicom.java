@@ -19,7 +19,6 @@ public class AboutDicom extends Activity
     @Override
     public boolean onCreateOptionsMenu(Menu p_menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_about_dicom, p_menu);
         return true;
     }

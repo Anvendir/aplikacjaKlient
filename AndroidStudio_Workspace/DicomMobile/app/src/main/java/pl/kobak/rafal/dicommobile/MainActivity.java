@@ -19,7 +19,6 @@ public class MainActivity extends Activity
     @Override
     public boolean onCreateOptionsMenu(Menu p_menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, p_menu);
         return true;
     }
@@ -27,12 +26,8 @@ public class MainActivity extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem p_item)
     {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int l_id = p_item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if(l_id == R.id.action_opsenFile)
         {
             Intent l_openFile = new Intent(this, OpenFile.class);
