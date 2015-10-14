@@ -7,20 +7,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class OpenFile extends Activity
+public class OpenFileLocally extends Activity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_file);
+        setContentView(R.layout.activity_open_file_locally);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        getMenuInflater().inflate(R.menu.menu_open_file, menu);
+        getMenuInflater().inflate(R.menu.menu_open_file_locally, menu);
         return true;
     }
 
@@ -37,21 +36,14 @@ public class OpenFile extends Activity
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick_openFileLocally(View p_view)
+    public void onClick_openFile(View p_view)
     {
-        Intent l_openFileLocally = new Intent(this, OpenFileLocally.class);
-        startActivity(l_openFileLocally);
+        Intent l_openFile = new Intent(this, FileWindow.class);
+        startActivity(l_openFile);
     }
 
-    public void onClick_openFileRemotely(View p_view)
+    public void onClick_cancel(View p_view)
     {
-        Intent l_openFileRemotely = new Intent(this, OpenFileRemotely.class);
-        startActivity(l_openFileRemotely);
-    }
-
-    public void onClick_history(View p_view)
-    {
-        Intent l_history = new Intent(this, History.class);
-        startActivity(l_history);
+        finish();
     }
 }

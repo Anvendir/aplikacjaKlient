@@ -7,16 +7,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".AboutDicom"
             android:label="@string/title_activity_about_dicom"
@@ -25,7 +24,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
-
         <activity
             android:name=".Language"
             android:label="@string/title_activity_language"
@@ -34,7 +32,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
-
         <activity
             android:name=".AboutApplication"
             android:label="@string/title_activity_about_application"
@@ -43,7 +40,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
-
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings"
@@ -52,7 +48,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
-
         <activity
             android:name=".OpenFile"
             android:label="@string/title_activity_open_file"
@@ -61,10 +56,41 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
-
         <activity
             android:name=".ConnectToServer"
             android:label="@string/title_activity_connect_to_server"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
+        </activity>
+        <activity
+            android:name=".OpenFileLocally"
+            android:label="@string/title_activity_open_file_locally"
+            android:parentActivityName=".OpenFile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.OpenFile" />
+        </activity>
+        <activity
+            android:name=".OpenFileRemotely"
+            android:label="@string/title_activity_open_file_remotely"
+            android:parentActivityName=".OpenFile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.OpenFile" />
+        </activity>
+        <activity
+            android:name=".History"
+            android:label="@string/title_activity_history"
+            android:parentActivityName=".OpenFile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.OpenFile" />
+        </activity>
+        <activity
+            android:name=".FileWindow"
+            android:label="@string/title_activity_file_window"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

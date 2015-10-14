@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="pl.kobak.rafal.dicommobile.FileWindow">
+
+      <item android:id="@+id/action_metaData"
+            android:title="@string/action_metaData"
+            android:orderInCategory="1"
+            android:showAsAction="ifRoom" />
+
+      <item android:id="@+id/action_quit"
+            android:title="@string/action_quit"
+            android:orderInCategory="2"
+            android:showAsAction="ifRoom" />
+
+      <item android:id="@+id/action_aboutFile"
+            android:title="@string/action_aboutFile"
+            android:orderInCategory="10"
+            android:showAsAction="never" />
+
+      <item android:id="@+id/action_fullMetaData"
+            android:title="@string/action_fullMetaData"
+            android:orderInCategory="15"
+            android:showAsAction="never" />
+
+      <item android:id="@+id/action_render"
+            android:title="@string/action_render"
+            android:orderInCategory="15"
+            android:showAsAction="never" />
+</menu>
