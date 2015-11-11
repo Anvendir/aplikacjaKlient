@@ -9,9 +9,12 @@
                 tools:context="pl.kobak.rafal.dicommobile.FileWindow">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:id="@+id/ImageView"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/obraz1"
+        android:contentDescription="Spierdalaj"/>
+
 </RelativeLayout>

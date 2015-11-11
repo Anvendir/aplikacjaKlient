@@ -96,6 +96,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
+        <activity
+            android:name=".Metadata"
+            android:label="@string/title_activity_metadata"
+            android:parentActivityName=".FileWindow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
+        </activity>
+        <activity
+            android:name=".AboutFile"
+            android:label="@string/title_activity_about_file"
+            android:parentActivityName=".FileWindow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
+        </activity>
+        <activity
+            android:name=".FullMetadata"
+            android:label="@string/title_activity_full_metadata"
+            android:parentActivityName=".FileWindow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
+        </activity>
+        <activity
+            android:name=".Rendering"
+            android:label="@string/title_activity_rendering"
+            android:parentActivityName=".FileWindow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
+        </activity>
     </application>
 
 </manifest>
