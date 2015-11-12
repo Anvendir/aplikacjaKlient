@@ -1,17 +1,20 @@
 ///Do zrobienia
-- tlo dla przyciskow + wygladzanie widoku przyciskow na ekranie wyboru jezyka
 - wylad glownej aktywnosci aplikacji
 	* tlo (lub animacja z jpegow, kilka nastepujacych po sobie zdjec z jednbego badania z renderingiem?)
-	* styl przyciskow
 	* animacja?
 - poczytac na twemat dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
 - Poczytac na temat mozilowsci  organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
-- zdefiniowanie tla dla przyciskow
 - przygotowanie ikony aplikacji
 	* biale D na czerwonym tle
 	* bialy eskula na niebieskim tle
 	* ikonab przygotowana dla czterech rozniariow ekranow
 - dodanie do ekranu polacz z serweram przyciskow polacz oraz anuuj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
+
+///12.11.2015
+- wylad glownej aktywnosci aplikacji ///zrobione
+	* styl przyciskow
+- zdefiniowanie tla dla przyciskow ///zrobione
+- tlo dla przyciskow + wygladzanie widoku przyciskow na ekranie wyboru jezyka  ///zrobione
 
 ///11.11.2015
 - ekrany dla aktywnosci glowneo widoku z edycja pliku  ///Zrobione

@@ -24,7 +24,9 @@
         android:id="@+id/button_historyOpen"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_openFile"/>
+        android:onClick="onClick_openFile"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -34,5 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/button_historyOpen"
         android:layout_toEndOf="@+id/button_historyOpen"
-        android:onClick="onClick_cancel"/>
+        android:onClick="onClick_cancel"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 </RelativeLayout>

@@ -15,7 +15,9 @@
         android:id="@+id/button_polish"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_polish"/>
+        android:background="@drawable/button"
+        android:onClick="onClick_polish"
+        style="@style/buttonStyle"/>
 
     <Button
         android:layout_width="@dimen/buttonLanguage_width"
@@ -24,7 +26,9 @@
         android:id="@+id/button_english"
         android:layout_above="@+id/button_polish"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_english"/>
+        android:background="@drawable/button"
+        android:onClick="onClick_english"
+        style="@style/buttonStyle"/>
 
     <Button
         android:layout_width="@dimen/buttonLanguage_width"
@@ -33,6 +37,8 @@
         android:id="@+id/button_german"
         android:layout_below="@+id/button_polish"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_german"/>
+        android:background="@drawable/button"
+        android:onClick="onClick_german"
+        style="@style/buttonStyle"/>
 
 </RelativeLayout>

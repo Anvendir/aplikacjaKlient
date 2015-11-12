@@ -16,5 +16,7 @@
         android:onClick="onClick_quit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 </RelativeLayout>

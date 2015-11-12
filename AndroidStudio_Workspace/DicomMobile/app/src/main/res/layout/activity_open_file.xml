@@ -15,7 +15,9 @@
         android:id="@+id/button_openRemotely"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_openFileRemotely"/>
+        android:onClick="onClick_openFileRemotely"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 
     <Button
         android:layout_width="@dimen/buttonLanguage_width"
@@ -24,7 +26,9 @@
         android:id="@+id/button_openLocally"
         android:layout_above="@+id/button_openRemotely"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_openFileLocally"/>
+        android:onClick="onClick_openFileLocally"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 
     <Button
         android:layout_width="@dimen/buttonLanguage_width"
@@ -33,6 +37,8 @@
         android:id="@+id/button_history"
         android:layout_below="@+id/button_openRemotely"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick_history"/>
+        android:onClick="onClick_history"
+        android:background="@drawable/button"
+        style="@style/buttonStyle"/>
 
 </RelativeLayout>
