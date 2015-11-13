@@ -14,7 +14,7 @@
         android:id="@+id/ImageView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/obraz1"
+        android:src="@drawable/rozdzielczosc"
         android:contentDescription="Spierdalaj"/>
 
 </RelativeLayout>
