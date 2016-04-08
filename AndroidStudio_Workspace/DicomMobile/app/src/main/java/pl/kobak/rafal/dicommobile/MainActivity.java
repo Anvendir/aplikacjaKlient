@@ -2,6 +2,8 @@ package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +16,10 @@ public class MainActivity extends Activity
     {
         super.onCreate(p_savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //AnimationDrawable l_background = getWindow().getDecorView().getBackground();
+        //AnimationDrawable l_animation = (AnimationDrawable) l_background;
+        //l_animation.start();
     }
 
     @Override

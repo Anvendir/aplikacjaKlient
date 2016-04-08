@@ -1,45 +1,65 @@
-///Do zrobienia
-- wylad glownej aktywnosci aplikacji
-	* tlo (lub animacja z jpegow, kilka nastepujacych po sobie zdjec z jednbego badania z renderingiem?)
-	* animacja?
-- poczytac na twemat dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
-- Poczytac na temat mozilowsci  organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
-- przygotowanie ikony aplikacji
+//08.04.2016
+Zrobione:
+1. Aktualizacja srodowiska po dlugiej przerwie.
+2. Doprowadzenie programu do kompilowalnosci i stanu do uruchomienia na tablecie.
+
+Do zrobienia:
+1. Wylad glownej aktywnosci aplikacji
+	* w oknie glownym animacja z nastepujacych po sobie jpegow (pliki animation_main_window.*)
+	* z pierwsej ksiazki o podstawach jest opis jak to zrobic
+2. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+3. Zmiana organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
+4. Przygotowanie ikony aplikacji
 	* biale D na czerwonym tle
 	* bialy eskula na niebieskim tle
 	* ikonab przygotowana dla czterech rozniariow ekranow
-- dodanie do ekranu polacz z serweram przyciskow polacz oraz anuuj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
+5. Dodanie do ekranu polacz z serweram przyciskow polacz oraz anuluj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
+6. Dopiac sie z obslug sieci.
 
 ///12.11.2015
-- wylad glownej aktywnosci aplikacji ///zrobione
+Zrobione:
+1. Wyglad glownej aktywnosci aplikacji
 	* styl przyciskow
-- zdefiniowanie tla dla przyciskow ///zrobione
-- tlo dla przyciskow + wygladzanie widoku przyciskow na ekranie wyboru jezyka  ///zrobione
+2. Zdefiniowanie tla dla przyciskow
+3. Tlo dla przyciskow + wygladzanie widoku przyciskow na ekranie wyboru jezyka 
+
+Do zrobienia:
+1. Wylad glownej aktywnosci aplikacji
+	* tlo (lub animacja z jpegow, kilka nastepujacych po sobie zdjec z jednbego badania z renderingiem?)
+	* animacja?
+2. Poczytac na twemat dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+3. Poczytac na temat mozilowsci  organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
+4. Przygotowanie ikony aplikacji
+	* biale D na czerwonym tle
+	* bialy eskula na niebieskim tle
+	* ikonab przygotowana dla czterech rozniariow ekranow
+5. Dodanie do ekranu polacz z serweram przyciskow polacz oraz anuuj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
 
 ///11.11.2015
-- ekrany dla aktywnosci glowneo widoku z edycja pliku  ///Zrobione
-- efekt specjalny dla okna z wyborem jezykow ///Zrobione
+Zrobione:
+- ekrany dla aktywnosci glowneo widoku z edycja pliku
+- efekt specjalny dla okna z wyborem jezykow
 	* kolka lub prostokaty
 	* kolor w zaleznosci od jezyka
 	* zmiana ukladu za kazdym klknieciem w dowolny kolor
-- zdjecie DICOM po konwersji do jpg, w obiekcie InageView w glowym widoku edycji pliku  ///zrobione
+- zdjecie DICOM po konwersji do jpg, w obiekcie InageView w glowym widoku edycji pliku
 	
-4. Ekran z otwartym plikiem  ///zrobione
+4. Ekran z otwartym plikiem
 * na calosci obraz 
 
 ///Starsze
--> do zrobienia
-1. ekran otworz plik lokalnie ///zrobione
+Zrobione:
+1. ekran otworz plik lokalnie
 * pole tekstowe gdzie w rpzyszlosci bedzie lista plikow
 * przyciski otowrz i anuluj
 
-2. ekran otowrz zdalnie  ///zrobione
+2. ekran otowrz zdalnie
 * pole tekstowe z lista plikow
 * przyciski otowrz oraz anuluj
 
-3. Ekran historia  ///zrobione
+3. Ekran historia
 
-4. Ekran z otwartym plikiem  ///zrobione
-* na calosci obraz 	|| BRAK
+4. Ekran z otwartym plikiem
+* na calosci obraz
 * w menu na sta³e Metedane oraz Zamknij
 * w menu rozwijanym O pliku, Pe³ne metadane, Rendering
