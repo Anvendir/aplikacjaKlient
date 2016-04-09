@@ -8,18 +8,33 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity
 {
+    private boolean m_isMovement = false;
     @Override
     protected void onCreate(Bundle p_savedInstanceState)
     {
         super.onCreate(p_savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        //AnimationDrawable l_background = getWindow().getDecorView().getBackground();
-        //AnimationDrawable l_animation = (AnimationDrawable) l_background;
-        //l_animation.start();
+    public void onClickMainAnimation(View p_view)
+    {
+        ImageView l_img = (ImageView) findViewById(R.id.animationView);
+        AnimationDrawable l_animation = (AnimationDrawable) l_img.getBackground();
+
+        if (m_isMovement)
+        {
+            l_animation.stop();
+            m_isMovement = false;
+        }
+        else
+        {
+            l_animation.start();
+            m_isMovement = true;
+        }
     }
 
     @Override

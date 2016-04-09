@@ -1,3 +1,19 @@
+//09.04.2016
+Zrobione:
+1. Wylad glownej aktywnosci aplikacji
+	* w oknie glownym animacja z nastepujacych po sobie jpegow (pliki animation_main_window.*)
+	* z pierwsej ksiazki o podstawach jest opis jak to zrobic
+
+Do zrobienia:
+1. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+2. Zmiana organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
+3. Przygotowanie ikony aplikacji
+	* biale D na czerwonym tle
+	* bialy eskula na niebieskim tle
+	* ikonab przygotowana dla czterech rozniariow ekranow
+4. Dodanie do ekranu polacz z serweram przyciskow polacz oraz anuluj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
+5. Dopiac sie z obslug sieci.
+
 //08.04.2016
 Zrobione:
 1. Aktualizacja srodowiska po dlugiej przerwie.
