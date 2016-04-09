@@ -3,7 +3,6 @@ package pl.kobak.rafal.dicommobile;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +11,6 @@ import android.widget.ImageView;
 
 public class MainActivity extends Activity
 {
-    private boolean m_isMovement = false;
     @Override
     protected void onCreate(Bundle p_savedInstanceState)
     {
@@ -20,9 +18,10 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
     }
 
+    private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)
     {
-        ImageView l_img = (ImageView) findViewById(R.id.animationView);
+        ImageView l_img = (ImageView) findViewById(R.id.animationViewMain);
         AnimationDrawable l_animation = (AnimationDrawable) l_img.getBackground();
 
         if (m_isMovement)

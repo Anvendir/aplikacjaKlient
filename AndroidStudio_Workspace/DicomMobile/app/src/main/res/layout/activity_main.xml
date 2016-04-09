@@ -20,16 +20,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="false"/>
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/animationView"
+        android:id="@+id/animationViewMain"
         android:background="@drawable/animation_main_window"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="onClickMainAnimation"/>
-
 
 </RelativeLayout>

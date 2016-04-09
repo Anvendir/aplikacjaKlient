@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
                 android:oneshot="false">
-    <item android:drawable="@drawable/animation_main_wndow_1" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_2" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_3" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_4" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_5" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_6" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_7" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_8" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_9" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_10" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_11" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_1" android:duration="150"> </item>
+   <!--  <item android:drawable="@drawable/animation_main_wndow_2" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_3" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_4" android:duration="100"> </item>-->
+     <item android:drawable="@drawable/animation_main_wndow_5" android:duration="150"> </item>
+    <!-- <item android:drawable="@drawable/animation_main_wndow_6" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_7" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_8" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_9" android:duration="100"> </item>-->
+     <item android:drawable="@drawable/animation_main_wndow_10" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_11" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_12" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_13" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_14" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_15" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_16" android:duration="100"> </item>
+    <item android:drawable="@drawable/animation_main_wndow_14" android:duration="100"> </item>-->
+    <item android:drawable="@drawable/animation_main_wndow_15" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_16" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_17" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_18" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_19" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_20" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_21" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_22" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_23" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_24" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_25" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_26" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_27" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_28" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_29" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_30" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_31" android:duration="100"> </item>
+    <item android:drawable="@drawable/animation_main_wndow_19" android:duration="100"> </item>-->
+    <item android:drawable="@drawable/animation_main_wndow_20" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_21" android:duration="100"> </item>
+   <item android:drawable="@drawable/animation_main_wndow_22" android:duration="100"> </item>
+   <item android:drawable="@drawable/animation_main_wndow_23" android:duration="100"> </item>
+   <item android:drawable="@drawable/animation_main_wndow_24" android:duration="100"> </item>-->
+   <item android:drawable="@drawable/animation_main_wndow_25" android:duration="150"> </item>
+   <!--<item android:drawable="@drawable/animation_main_wndow_26" android:duration="100"> </item>
+   <item android:drawable="@drawable/animation_main_wndow_27" android:duration="100"> </item>
+   <item android:drawable="@drawable/animation_main_wndow_28" android:duration="100"> </item>
+  <item android:drawable="@drawable/animation_main_wndow_29" android:duration="100"> </item>-->
+  <item android:drawable="@drawable/animation_main_wndow_30" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_31" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_32" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_33" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_34" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_35" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_36" android:duration="100"> </item>
+    <item android:drawable="@drawable/animation_main_wndow_34" android:duration="100"> </item>-->
+    <item android:drawable="@drawable/animation_main_wndow_35" android:duration="150"> </item>
+   <!-- <item android:drawable="@drawable/animation_main_wndow_36" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_37" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_38" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_39" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_40" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_41" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_42" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_43" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_44" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_45" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_46" android:duration="100"> </item>
+    <item android:drawable="@drawable/animation_main_wndow_39" android:duration="100"> </item>-->
+  <item android:drawable="@drawable/animation_main_wndow_40" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_41" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_42" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_43" android:duration="100"> </item>
+     <item android:drawable="@drawable/animation_main_wndow_44" android:duration="100"> </item>-->
+     <item android:drawable="@drawable/animation_main_wndow_45" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_46" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_47" android:duration="100"> </item>
     <item android:drawable="@drawable/animation_main_wndow_48" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_49" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_50" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_51" android:duration="100"> </item>
-    <item android:drawable="@drawable/animation_main_wndow_52" android:duration="100"> </item>
-</animation-list>
+    <item android:drawable="@drawable/animation_main_wndow_49" android:duration="100"> </item>-->
+  <item android:drawable="@drawable/animation_main_wndow_50" android:duration="150"> </item>
+    <!--<item android:drawable="@drawable/animation_main_wndow_51" android:duration="100"> </item>
+    <item android:drawable="@drawable/animation_main_wndow_52" android:duration="100"> </item>-->
+  </animation-list>
