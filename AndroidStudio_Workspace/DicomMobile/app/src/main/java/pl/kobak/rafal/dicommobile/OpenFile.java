@@ -9,7 +9,6 @@ import android.view.View;
 
 public class OpenFile extends Activity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -18,9 +17,9 @@ public class OpenFile extends Activity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
+    public boolean onCreateOptionsMenu(Menu p_menu)
     {
-        getMenuInflater().inflate(R.menu.menu_open_file, menu);
+        getMenuInflater().inflate(R.menu.menu_open_file, p_menu);
         return true;
     }
 

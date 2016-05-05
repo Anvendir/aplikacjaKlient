@@ -1,45 +1,43 @@
 package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class History extends Activity {
-
+public class History extends Activity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle p_savedInstanceState)
+    {
+        super.onCreate(p_savedInstanceState);
         setContentView(R.layout.activity_history);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_history, menu);
+    public boolean onCreateOptionsMenu(Menu p_menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_history, p_menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
+    public boolean onOptionsItemSelected(MenuItem p_item)
     {
+        int id = p_item.getItemId();
 
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(p_item);
     }
 
     public void onClick_openFile(View p_view)
     {
-        Intent l_openFile = new Intent(this, FileWindow.class);
-        startActivity(l_openFile);
     }
 
     public void onClick_cancel(View p_view)

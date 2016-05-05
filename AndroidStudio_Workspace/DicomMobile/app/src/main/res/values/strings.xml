@@ -34,6 +34,7 @@
     <string name="button_history">Historia</string>
     <string name="button_open">Otwórz</string>
     <string name="button_cancel">Anuluj</string>
+    <string name="button_connect">Połącz</string>
 
     <string name="text_aboutApp">Tutaj tekst na temat applikacji </string>
     <string name="text_aboutDicom">
