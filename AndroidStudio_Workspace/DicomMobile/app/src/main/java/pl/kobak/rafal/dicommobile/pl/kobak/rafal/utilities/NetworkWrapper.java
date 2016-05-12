@@ -14,10 +14,6 @@ public class NetworkWrapper
 {
     final String LABEL = getClass().getSimpleName();
 
-    public NetworkWrapper()
-    {
-    }
-
     public void connect(String p_ipAddress,
                         String p_portNumber)
     {
@@ -32,12 +28,14 @@ class ClientThread implements Runnable
     final String LABEL = this.getClass().getSimpleName();
     private String m_serverIp;
     private int m_serverPort;
+    private Socket m_socket;
 
     public ClientThread(String p_ipAddress, String p_portNumber)
     {
         super();
         m_serverIp = p_ipAddress;
         m_serverPort = Integer.parseInt(p_portNumber);
+        m_socket = new Socket();
     }
 
     @Override
@@ -45,27 +43,51 @@ class ClientThread implements Runnable
     {
         try
         {
-            InetAddress l_serverAddr = InetAddress.getByName(m_serverIp);
-            Socket l_socket = new Socket(l_serverAddr, m_serverPort);
-            Log.d(LABEL, "Bla");
+            InetAddress l_serverAddress = InetAddress.getByName(m_serverIp);
+            m_socket = new Socket(l_serverAddress, m_serverPort);
 
-            InputStreamReader l_in = new InputStreamReader(l_socket.getInputStream());
-            Log.d(LABEL, "Bla");
-            char[] buffer = new char[1024];
-            int bla = l_in.read(buffer);
-            Log.d(LABEL, "X");
-            for (int i = 0; i < 40; i++)
-            {
-               Log.d(LABEL, "rec: " + buffer[i]);
-            }
+            Log.d(LABEL, "Connection with " + m_serverIp +
+                    " in port " + m_serverPort +
+                    " successfully established.");
         }
         catch (UnknownHostException e)
         {
-            Log.d(LABEL, "Exception occurred: Unknown host: " + m_serverIp);
+            Log.d(LABEL, "Exception occurred: Unknown host: " + m_serverIp + "!");
         }
         catch (IOException e)
         {
-            Log.d(LABEL, "Exception occurred: No I/O");
+            Log.d(LABEL, "Exception occurred: No I/O!");
+        }
+        catch (Exception e)
+        {
+            Log.d(LABEL, "Unknown exception occurred!");
+        }
+
+        processConnection();
+    }
+
+    private void processConnection()
+    {
+        try
+        {
+            InputStreamReader l_in = new InputStreamReader(m_socket.getInputStream());
+            //char[] buffer = new char[1024];
+            //l_in.read(buffer);
+            char[] msgIdBuffer = new char[4];
+            l_in.read(msgIdBuffer);
+
+            String a = new String(msgIdBuffer);
+            a = a.replace("\0", "");
+            int foo = Integer.parseInt(a);
+
+            Message m = new Message();
+            m.msgId = EMessageId.values()[foo];
+
+            Log.d(LABEL, "rec: " + m.msgId.name());
+        }
+        catch (IOException e)
+        {
+            Log.d(LABEL, "Exception occurred: No I/O!");
         }
     }
 }

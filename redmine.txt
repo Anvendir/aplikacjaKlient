@@ -4,6 +4,7 @@ Zrobione:
 	* spiac ekran polacz z sererem z kodem, tak zeby czytac to co jest wpisywane w okienka i przesylac
 	* dodanie obslugi bledow
 	* dodanie klasy validatora adresu ip
+	* zdefiniowac strukture danych dla Message, analogicnzie jak w serwerze
 
 Do zrobienia:
 1. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
@@ -14,7 +15,6 @@ Do zrobienia:
 	* wybrac t³o - jedno lub kilka na rozne ekrany
 	* w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
 5. Dopiac sie z obslug sieci.
-	* zdefiniowac strukture danych dla Message, analogicnzie jak w serwerze
 	* dodac konwerter z odczytanej RawMessage na Message
 	* dodac mozlwosc przeslania listy plikow i nastepnie konkretnego pliku z serwera
 6. Dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
