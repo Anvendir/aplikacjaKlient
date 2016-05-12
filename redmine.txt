@@ -1,3 +1,27 @@
+//13.05.2016
+Zrobione:
+1. Dopiac sie z obslug sieci.
+	* spiac ekran polacz z sererem z kodem, tak zeby czytac to co jest wpisywane w okienka i przesylac
+	* dodanie obslugi bledow
+	* dodanie klasy validatora adresu ip
+
+Do zrobienia:
+1. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+2. Przygotowanie ikony aplikacji
+	* wybrac jeden z prototypow, podlaczyc do aplikacji
+3. W oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+4. Dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+	* wybrac t³o - jedno lub kilka na rozne ekrany
+	* w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+5. Dopiac sie z obslug sieci.
+	* zdefiniowac strukture danych dla Message, analogicnzie jak w serwerze
+	* dodac konwerter z odczytanej RawMessage na Message
+	* dodac mozlwosc przeslania listy plikow i nastepnie konkretnego pliku z serwera
+6. Dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+7. Animacja w ekranie startowym powinna startowac automatycznie i  byc troche wolniejsza
+8. Po polaczeniu z serwerem jakas dodatkowa kontrolka informujaca nas o tym
+
+
 //12.05.2016
 Zrobione:
 1. Dodanie do ekranu polacz z serweram przyciskow polacz oraz anuluj, oraz dodanie edytorki z adresem serwera (hostame lub ip)

@@ -2,14 +2,25 @@ package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
+import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.IpAddressValidator;
 import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.NetworkWrapper;
 
 public class ConnectToServer extends Activity
 {
+    final String LABEL = getClass().getSimpleName();
+    private IpAddressValidator m_addressValidator;
+
+    public ConnectToServer()
+    {
+        super();
+        m_addressValidator = new IpAddressValidator();
+    }
 
     @Override
     protected void onCreate(Bundle p_savedInstanceState)
@@ -28,9 +39,9 @@ public class ConnectToServer extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem p_item)
     {
-        int id = p_item.getItemId();
+        int l_id = p_item.getItemId();
 
-        if (id == R.id.action_settings)
+        if (l_id == R.id.action_settings)
         {
             return true;
         }
@@ -40,7 +51,44 @@ public class ConnectToServer extends Activity
 
     public void onClick_connect(View p_view)
     {
+        EditText l_ipAddressEditText = (EditText) findViewById(R.id.ipAddressTextEdit);
+        String l_ipAddress = l_ipAddressEditText.getText().toString();
+
+        EditText l_portNumberEditText = (EditText) findViewById(R.id.portNumberEditText);
+        String l_portNumber = l_portNumberEditText.getText().toString();
+
+        logReceivedAddress(l_ipAddress, l_portNumber);
+        boolean l_isValid = m_addressValidator.validateServerAddress(l_ipAddress, l_portNumber);
+        if (!l_isValid)
+        {
+            Log.d(LABEL, "Invalid ip address or port number!");
+
+            l_ipAddressEditText.getText().clear();
+            l_ipAddressEditText.setHint(getString(R.string.incorrectData));
+            l_portNumberEditText.getText().clear();
+            l_portNumberEditText.setHint(getString(R.string.incorrectData));
+
+            return;
+        }
+
         NetworkWrapper l_networkWrapper = new NetworkWrapper();
-        l_networkWrapper.connect();
+        l_networkWrapper.connect(l_ipAddress, l_portNumber);
+    }
+
+    public void onClick_clear(View p_view)
+    {
+        EditText l_ipAddressEditText = (EditText) findViewById(R.id.ipAddressTextEdit);
+        l_ipAddressEditText.getText().clear();
+        l_ipAddressEditText.setHint(getString(R.string.hint_ipAddress));
+
+        EditText l_portNumberEditText = (EditText) findViewById(R.id.portNumberEditText);
+        l_portNumberEditText.getText().clear();
+        l_portNumberEditText.setHint(R.string.hint_portNumber);
+    }
+
+    private void logReceivedAddress(String p_ipAddress, String p_portNumber)
+    {
+        Log.d(LABEL, "Ip address: " + p_ipAddress);
+        Log.d(LABEL, "Port number: " + p_portNumber);
     }
 }

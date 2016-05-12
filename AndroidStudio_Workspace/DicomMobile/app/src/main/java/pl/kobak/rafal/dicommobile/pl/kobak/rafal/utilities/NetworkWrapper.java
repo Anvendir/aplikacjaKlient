@@ -1,52 +1,52 @@
 package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
 import android.util.Log;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
 
 /**
  * Created by Rafal on 2016-05-05.
  */
 public class NetworkWrapper
 {
-    static final String LABEL = "NetworkWrapper";
+    final String LABEL = getClass().getSimpleName();
 
     public NetworkWrapper()
     {
-        Log.d(LABEL, "Object of "
-                     + this.getClass().getSimpleName()
-                     + " class has been created");
     }
 
-    public void connect()
+    public void connect(String p_ipAddress,
+                        String p_portNumber)
     {
         Log.d(LABEL, "Function connect has been called");
-        Thread l_connectionThread = new Thread(new ClientThread());
+        Thread l_connectionThread = new Thread(new ClientThread(p_ipAddress, p_portNumber));
         l_connectionThread.start();
     }
 }
 
 class ClientThread implements Runnable
 {
-    private static final String SERVER_IP = "192.168.1.6";
-    private static final int SERVER_PORT = 9878;
-    static final String LABEL = "NetworkWrapper";
+    final String LABEL = this.getClass().getSimpleName();
+    private String m_serverIp;
+    private int m_serverPort;
+
+    public ClientThread(String p_ipAddress, String p_portNumber)
+    {
+        super();
+        m_serverIp = p_ipAddress;
+        m_serverPort = Integer.parseInt(p_portNumber);
+    }
 
     @Override
     public void run()
     {
         try
         {
-            InetAddress l_serverAddr = InetAddress.getByName(SERVER_IP);
-            Socket l_socket = new Socket(l_serverAddr, SERVER_PORT);
+            InetAddress l_serverAddr = InetAddress.getByName(m_serverIp);
+            Socket l_socket = new Socket(l_serverAddr, m_serverPort);
             Log.d(LABEL, "Bla");
 
             InputStreamReader l_in = new InputStreamReader(l_socket.getInputStream());
@@ -61,7 +61,7 @@ class ClientThread implements Runnable
         }
         catch (UnknownHostException e)
         {
-            Log.d(LABEL, "Exception occurred: Unknown host: 192.168.1.6");
+            Log.d(LABEL, "Exception occurred: Unknown host: " + m_serverIp);
         }
         catch (IOException e)
         {
