@@ -1,5 +1,8 @@
 package pl.kobak.rafal.dicommobile;
 
+import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.IpAddressValidator;
+import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.ServerConnectionHandler;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,9 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-
-import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.IpAddressValidator;
-import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.NetworkWrapper;
 
 public class ConnectToServer extends Activity
 {
@@ -71,8 +71,8 @@ public class ConnectToServer extends Activity
             return;
         }
 
-        NetworkWrapper l_networkWrapper = new NetworkWrapper();
-        l_networkWrapper.connect(l_ipAddress, l_portNumber);
+        Thread l_connectionThread = new Thread(new ServerConnectionHandler(l_ipAddress, l_portNumber));
+        l_connectionThread.start();
     }
 
     public void onClick_clear(View p_view)

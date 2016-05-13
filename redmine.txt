@@ -1,4 +1,31 @@
 //13.05.2016
+
+Zrobione:
+1. Dopiac sie z obslug sieci.
+	* dodac konwerter z odczytanej RawMessage na Message - nazwano message reader
+	* zrobiony spoosb obslugi zdarzen sieciowych, usuniecie NetworkWrapper, stworzenie handlerow dla kazdego zawolania
+
+Do zrobienia:
+1. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+2. Przygotowanie ikony aplikacji
+	* wybrac jeden z prototypow, podlaczyc do aplikacji
+3. W oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+4. Dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+	* wybrac t³o - jedno lub kilka na rozne ekrany
+	* w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+5. Dopiac sie z obslug sieci.
+	* dodac mozlwosc przeslania listy plikow i nastepnie konkretnego pliku z serwera
+	    * dodac odpowiednie kalsy Handlerow
+	    * dodac Message Sender
+	    * przebudowac ekrany tak ab obslugiwac pobieranie pliku z serwera, czy pobranie listy plikow
+	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
+	* dodac w ekroanie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
+	    
+6. Dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+7. Animacja w ekranie startowym powinna startowac automatycznie i  byc troche wolniejsza
+8. Po polaczeniu z serwerem jakas dodatkowa kontrolka informujaca nas o tym
+
+//12.05.2016
 Zrobione:
 1. Dopiac sie z obslug sieci.
 	* spiac ekran polacz z sererem z kodem, tak zeby czytac to co jest wpisywane w okienka i przesylac
@@ -22,7 +49,7 @@ Do zrobienia:
 8. Po polaczeniu z serwerem jakas dodatkowa kontrolka informujaca nas o tym
 
 
-//12.05.2016
+//11.05.2016
 Zrobione:
 1. Dodanie do ekranu polacz z serweram przyciskow polacz oraz anuluj, oraz dodanie edytorki z adresem serwera (hostame lub ip)
 2. Zmiana organizacji struktury katalogow w AndroidStudio tak aby poszczgolne dzieci mogly znajdowac sie  w katalkogwo rodzicow
