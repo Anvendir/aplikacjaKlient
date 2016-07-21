@@ -16,10 +16,14 @@ public class ServerConnectionHandler extends CommonHandler
     public void run()
     {
         super.connectToServer();
-        MessageReader l_msgReader = new MessageReader(super.m_socket);
+        MessageReader l_msgReader = new MessageReader();
         Message l_msg = l_msgReader.readMessage();
 
         printWelcomeMessage(l_msg);
+
+        Message l_tmp = new Message();
+        MessageSender l_msgSender = new MessageSender();
+        l_msgSender.send(l_tmp);
     }
 
     private void printWelcomeMessage(Message p_msg)

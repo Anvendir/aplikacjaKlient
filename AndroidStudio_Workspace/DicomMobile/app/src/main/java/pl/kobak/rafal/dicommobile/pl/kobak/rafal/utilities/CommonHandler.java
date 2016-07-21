@@ -7,6 +7,8 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import pl.kobak.rafal.dicommobile.MainActivity;
+
 /**
  * Created by Rafal on 2016-05-13.
  */
@@ -14,15 +16,13 @@ public class CommonHandler implements Runnable
 {
     protected String LABEL = this.getClass().getSimpleName();
     protected String m_serverIp;
-    protected int m_serverPort;
-    protected Socket m_socket;
+    public static int m_serverPort;
 
     public CommonHandler(String p_ipAddress, String p_portNumber)
     {
         super();
         m_serverIp = p_ipAddress;
         m_serverPort = Integer.parseInt(p_portNumber);
-        m_socket = new Socket();
     }
 
     @Override
@@ -35,7 +35,7 @@ public class CommonHandler implements Runnable
         try
         {
             InetAddress l_serverAddress = InetAddress.getByName(m_serverIp);
-            m_socket = new Socket(l_serverAddress, m_serverPort);
+            MainActivity.s_socket = new Socket(l_serverAddress, m_serverPort);
 
             Log.d(LABEL, "Connection with " + m_serverIp +
                          " in port " + m_serverPort +

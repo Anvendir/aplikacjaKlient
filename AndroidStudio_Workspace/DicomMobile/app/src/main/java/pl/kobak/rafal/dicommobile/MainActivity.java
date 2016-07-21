@@ -9,14 +9,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.net.Socket;
+
 public class MainActivity extends Activity
 {
+    public MainActivity()
+    {
+        super();
+        s_socket = new Socket();
+    }
+
     @Override
     protected void onCreate(Bundle p_savedInstanceState)
     {
         super.onCreate(p_savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public static Socket s_socket;
 
     private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)

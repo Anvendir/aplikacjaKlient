@@ -2,7 +2,6 @@ package pl.kobak.rafal.dicommobile;
 
 import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.IpAddressValidator;
 import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.ServerConnectionHandler;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;

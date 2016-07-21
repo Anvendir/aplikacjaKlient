@@ -3,20 +3,22 @@ package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 import android.util.Log;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.Socket;
+import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
  * Created by Rafal on 2016-05-13.
  */
 public class MessageReader
 {
-    private Socket m_socket;
     private Message m_message;
     private String LABEL = this.getClass().getSimpleName();
+    private final int MSG_ID_SIZE = 4;
+    private final int NUM_OF_MSG_IN_FILE_TRANSFER_SIZE = 10;
+    private final int BYTES_IN_PAYLOAD_SIZE = 5;
+    private final int PAYLOAD_SIZE = 1024;
 
-    public MessageReader(Socket p_socket)
+    public MessageReader()
     {
-        m_socket = p_socket;
         m_message = new Message();
     }
 
@@ -24,7 +26,7 @@ public class MessageReader
     {
         try
         {
-            InputStreamReader l_in = new InputStreamReader(m_socket.getInputStream());
+            InputStreamReader l_in = new InputStreamReader(MainActivity.s_socket.getInputStream());
 
             readMessageId(l_in);
             readNumOfMsgInFileTransfer(l_in);
@@ -43,10 +45,10 @@ public class MessageReader
     {
         try
         {
-            char[] rawBuffer = new char[4];
-            p_in.read(rawBuffer);
+            char[] l_rawBuffer = new char[MSG_ID_SIZE];
+            p_in.read(l_rawBuffer);
 
-            String l_string = new String(rawBuffer);
+            String l_string = new String(l_rawBuffer);
             l_string = l_string.replace("\0", "");
             int l_int = Integer.parseInt(l_string);
 
@@ -64,7 +66,7 @@ public class MessageReader
     {
         try
         {
-            char[] rawBuffer = new char[10];
+            char[] rawBuffer = new char[NUM_OF_MSG_IN_FILE_TRANSFER_SIZE];
             p_in.read(rawBuffer);
 
             String l_string = new String(rawBuffer);
@@ -83,7 +85,7 @@ public class MessageReader
     {
         try
         {
-            char[] rawBuffer = new char[5];
+            char[] rawBuffer = new char[BYTES_IN_PAYLOAD_SIZE];
             p_in.read(rawBuffer);
 
             String l_string = new String(rawBuffer);
@@ -102,7 +104,7 @@ public class MessageReader
     {
         try
         {
-            char[] rawBuffer = new char[1024];
+            char[] rawBuffer = new char[PAYLOAD_SIZE];
             p_in.read(rawBuffer);
             m_message.payload = rawBuffer;
         }
