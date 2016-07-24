@@ -17,6 +17,8 @@ public class MainActivity extends Activity
     {
         super();
         s_socket = new Socket();
+        s_ipAddress = new String();
+        s_portNumber = new String();
     }
 
     @Override
@@ -26,6 +28,8 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
     }
     public static Socket s_socket;
+    public static String s_ipAddress;
+    public static String s_portNumber;
 
     private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)

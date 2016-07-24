@@ -27,7 +27,7 @@ public class MessageReader
         try
         {
             InputStreamReader l_in = new InputStreamReader(MainActivity.s_socket.getInputStream());
-
+            Log.d(LABEL, "Po utworzeniu InputStreamReader");
             readMessageId(l_in);
             readNumOfMsgInFileTransfer(l_in);
             readBytesInPayload(l_in);
@@ -45,15 +45,16 @@ public class MessageReader
     {
         try
         {
+            Log.d(LABEL, "cztery");
             char[] l_rawBuffer = new char[MSG_ID_SIZE];
             p_in.read(l_rawBuffer);
-
+            Log.d(LABEL, "trzy");
             String l_string = new String(l_rawBuffer);
             l_string = l_string.replace("\0", "");
             int l_int = Integer.parseInt(l_string);
-
+            Log.d(LABEL, "dwa");
             m_message.msgId = EMessageId.values()[l_int];
-
+            Log.d(LABEL, "raz");
             Log.d(LABEL, "Msg id: " + m_message.msgId.name());
         }
         catch (IOException e)

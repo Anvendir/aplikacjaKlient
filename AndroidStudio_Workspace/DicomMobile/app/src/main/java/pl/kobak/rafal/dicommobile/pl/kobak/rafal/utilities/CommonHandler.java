@@ -1,12 +1,10 @@
 package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
 import android.util.Log;
-
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
 import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
@@ -18,11 +16,11 @@ public class CommonHandler implements Runnable
     protected String m_serverIp;
     public static int m_serverPort;
 
-    public CommonHandler(String p_ipAddress, String p_portNumber)
+    public CommonHandler()
     {
         super();
-        m_serverIp = p_ipAddress;
-        m_serverPort = Integer.parseInt(p_portNumber);
+        m_serverIp = MainActivity.s_ipAddress;
+        m_serverPort = Integer.parseInt(MainActivity.s_portNumber);
     }
 
     @Override

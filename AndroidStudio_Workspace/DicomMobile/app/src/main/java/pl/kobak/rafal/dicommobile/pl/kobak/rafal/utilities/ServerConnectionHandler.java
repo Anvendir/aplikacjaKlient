@@ -7,9 +7,9 @@ import android.util.Log;
  */
 public class ServerConnectionHandler extends CommonHandler
 {
-    public ServerConnectionHandler(String p_ipAddress, String p_portNumber)
+    public ServerConnectionHandler()
     {
-        super(p_ipAddress, p_portNumber);
+        super();
     }
 
     @Override
@@ -20,10 +20,6 @@ public class ServerConnectionHandler extends CommonHandler
         Message l_msg = l_msgReader.readMessage();
 
         printWelcomeMessage(l_msg);
-
-        Message l_tmp = new Message();
-        MessageSender l_msgSender = new MessageSender();
-        l_msgSender.send(l_tmp);
     }
 
     private void printWelcomeMessage(Message p_msg)

@@ -1,3 +1,35 @@
+//24.07.2016
+
+Zrobione:
+1. Dopiac sie z obslug sieci.
+   * zrobione klasy handlerow dla polaczenia z serwerem
+   * zrobione klasy handlerow dla wysylania i odbieranie listy plikow z serwera
+   * odbieranie listy plikow z serwera
+   * klasa MessageSendera
+   * wersja 1.1 aplikacji
+
+Do zrobienia:
+1. Obsluga sieci.
+	* dodac mozliwosc przesylania plikow z serwera
+	    * plik tesktowy
+	    * plik binarny
+	* ogarniecie zapisywania i odczytywania plikow wewnatrz androida
+	* wyswietalnie listy dostepnych plikow w oknie otworz plik zdalnie
+	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
+	* dodac w ekranie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
+
+2. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+3. Przygotowanie ikony aplikacji
+	* wybrac jeden z prototypow, podlaczyc do aplikacji
+4. W oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+5. Dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+	* wybrac t³o - jedno lub kilka na rozne ekrany
+	* w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+	    
+7. Dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+8. Animacja w ekranie startowym powinna startowac automatycznie i  byc troche wolniejsza
+
+
 //13.05.2016
 
 Zrobione:

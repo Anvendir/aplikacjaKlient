@@ -1,15 +1,14 @@
 package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities.ServerFileListHandler;
 
 public class OpenFileRemotely extends Activity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -39,8 +38,11 @@ public class OpenFileRemotely extends Activity
 
     public void onClick_openFile(View p_view)
     {
-        Intent l_openFile = new Intent(this, FileWindow.class);
-        startActivity(l_openFile);
+        Thread l_connectionThread = new Thread(new ServerFileListHandler());
+        l_connectionThread.start();
+
+        //Intent l_openFile = new Intent(this, FileWindow.class);
+        //startActivity(l_openFile);
     }
 
     public void onClick_cancel(View p_view)

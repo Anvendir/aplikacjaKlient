@@ -70,7 +70,10 @@ public class ConnectToServer extends Activity
             return;
         }
 
-        Thread l_connectionThread = new Thread(new ServerConnectionHandler(l_ipAddress, l_portNumber));
+        MainActivity.s_ipAddress = l_ipAddress;
+        MainActivity.s_portNumber = l_portNumber;
+
+        Thread l_connectionThread = new Thread(new ServerConnectionHandler());
         l_connectionThread.start();
     }
 
