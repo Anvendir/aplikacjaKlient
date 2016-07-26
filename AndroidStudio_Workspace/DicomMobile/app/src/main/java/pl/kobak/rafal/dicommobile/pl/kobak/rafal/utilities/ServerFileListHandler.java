@@ -73,7 +73,7 @@ public class ServerFileListHandler extends CommonHandler
     private Message buildServerSendFileReq()
     {
         Message l_msg = new Message();
-        String l_payload = "./moduleTest/plikiPrzykladowe/malyJpeg.jpg";
+        String l_payload = "./moduleTest/plikiPrzykladowe/prostyPlik.txt";
         l_msg.msgId = EMessageId.SERVER_SEND_FILE_REQ;
         l_msg.numOfMsgInFileTransfer = 0;
         l_msg.bytesInPayload = l_payload.length();
@@ -102,12 +102,44 @@ public class ServerFileListHandler extends CommonHandler
 
     private void receiveSendFileInd()
     {
+        BufferedOutputStream l_bufferedOutputStream = getBufferedOutputStream("tekstowy.txt");
+
+        try
+        {
+            receiveFile(l_bufferedOutputStream);
+            l_bufferedOutputStream.flush();
+            l_bufferedOutputStream.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void receiveFile(BufferedOutputStream p_bufferedOutputStream)
+            throws IOException
+    {
+        for (int j = 0; j < m_numOfMsgInFileTransfer; j++)
+        {
+            MessageReader l_msgReader = new MessageReader();
+            Message l_msg = l_msgReader.readMessage();
+
+            for (int i = 0; i < l_msg.bytesInPayload; i++)
+            {
+                p_bufferedOutputStream.write(l_msg.payloadRead[i]);
+            }
+        }
+    }
+
+    private BufferedOutputStream getBufferedOutputStream(String p_outputFileName)
+    {
         File l_externalStorageDir = Environment.getExternalStorageDirectory();
         File l_directory = new File(l_externalStorageDir.getAbsolutePath() + "/mojePliki");
         l_directory.mkdirs();
 
-        File l_file = new File(l_directory, "bla.txt");
+        File l_file = new File(l_directory, p_outputFileName);
         FileOutputStream l_outputStream = null;
+
         try
         {
             l_outputStream = new FileOutputStream(l_file);
@@ -116,26 +148,6 @@ public class ServerFileListHandler extends CommonHandler
         {
             e.printStackTrace();
         }
-        BufferedOutputStream l_bufferedOutputStream = new BufferedOutputStream(l_outputStream);
-
-        try
-        {
-            for (int j = 0; j < m_numOfMsgInFileTransfer; j++)
-            {
-                MessageReader l_msgReader = new MessageReader();
-                Message l_msg = l_msgReader.readMessage();
-
-                for (int i = 0; i < l_msg.bytesInPayload; i++)
-                {
-                    l_bufferedOutputStream.write(l_msg.payloadRead[i]);
-                }
-            }
-            l_bufferedOutputStream.flush();
-            l_bufferedOutputStream.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        return new BufferedOutputStream(l_outputStream);
     }
 }
