@@ -107,7 +107,7 @@ public class MessageSender
     {
         for (int i = 0; i < p_message.bytesInPayload; i++)
         {
-            m_rawMessage[PAYLOAD_INDEX + i] = p_message.payload[i];
+            m_rawMessage[PAYLOAD_INDEX + i] = p_message.payloadWrite[i];
         }
     }
 }

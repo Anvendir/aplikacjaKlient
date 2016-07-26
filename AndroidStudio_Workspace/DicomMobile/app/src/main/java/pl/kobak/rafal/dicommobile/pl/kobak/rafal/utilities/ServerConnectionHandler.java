@@ -28,9 +28,6 @@ public class ServerConnectionHandler extends CommonHandler
         Log.d(LABEL, "msgId: " + p_msg.msgId.name());
         Log.d(LABEL, "numOfMsgInFileTransfer: " + p_msg.numOfMsgInFileTransfer);
         Log.d(LABEL, "bytesInPayload: " + p_msg.bytesInPayload);
-
-        String l_string = new String(p_msg.payload);
-        l_string = l_string.substring(0, p_msg.bytesInPayload - 1);
-        Log.d(LABEL, "payload: " + l_string);
+        Log.d(LABEL, "payload: " + p_msg.getUsefulPayload());
     }
 }

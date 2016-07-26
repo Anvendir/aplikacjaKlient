@@ -2,7 +2,7 @@ package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
 import android.util.Log;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
@@ -16,6 +16,10 @@ public class MessageReader
     private final int NUM_OF_MSG_IN_FILE_TRANSFER_SIZE = 10;
     private final int BYTES_IN_PAYLOAD_SIZE = 5;
     private final int PAYLOAD_SIZE = 1024;
+    private final int MSG_SIZE = MSG_ID_SIZE +
+                                 NUM_OF_MSG_IN_FILE_TRANSFER_SIZE +
+                                 BYTES_IN_PAYLOAD_SIZE +
+                                 PAYLOAD_SIZE;
 
     public MessageReader()
     {
@@ -26,12 +30,16 @@ public class MessageReader
     {
         try
         {
-            InputStreamReader l_in = new InputStreamReader(MainActivity.s_socket.getInputStream());
-            Log.d(LABEL, "Po utworzeniu InputStreamReader");
-            readMessageId(l_in);
-            readNumOfMsgInFileTransfer(l_in);
-            readBytesInPayload(l_in);
-            readPayload(l_in);
+            byte[] l_receivedRawMsg = new byte[MSG_SIZE];
+            InputStream l_inputStream = MainActivity.s_socket.getInputStream();
+            int l_readBytes = l_inputStream.read(l_receivedRawMsg, 0, l_receivedRawMsg.length);
+
+            Log.d(LABEL, "Amount of read bytes: " +  Integer.toString(l_readBytes));
+
+            fillMessageId(l_receivedRawMsg);
+            fillNumOfMsgInFileTransfer(l_receivedRawMsg);
+            fillBytesInPayload(l_receivedRawMsg);
+            fillPayload(l_receivedRawMsg);
         }
         catch (IOException e)
         {
@@ -41,77 +49,60 @@ public class MessageReader
         return m_message;
     }
 
-    private void readMessageId(InputStreamReader p_in)
+    private void fillMessageId(byte[] p_rawMessage)
     {
-        try
+        byte[] l_msgId = new byte[MSG_ID_SIZE];
+        for(int i = 0; i < MSG_ID_SIZE; i++)
         {
-            Log.d(LABEL, "cztery");
-            char[] l_rawBuffer = new char[MSG_ID_SIZE];
-            p_in.read(l_rawBuffer);
-            Log.d(LABEL, "trzy");
-            String l_string = new String(l_rawBuffer);
-            l_string = l_string.replace("\0", "");
-            int l_int = Integer.parseInt(l_string);
-            Log.d(LABEL, "dwa");
-            m_message.msgId = EMessageId.values()[l_int];
-            Log.d(LABEL, "raz");
-            Log.d(LABEL, "Msg id: " + m_message.msgId.name());
+            l_msgId[i] = p_rawMessage[i];
         }
-        catch (IOException e)
-        {
-            Log.d(LABEL, "Exception occurred during reading msgId: No I/O!");
-        }
+
+        String l_tempString = new String(l_msgId);
+        l_tempString = l_tempString.replace("\0", "");
+        int l_tempInt = Integer.parseInt(l_tempString);
+        m_message.msgId = EMessageId.values()[l_tempInt];
+
+        Log.d(LABEL, "Msg id: " + m_message.msgId.name());
     }
 
-    private void readNumOfMsgInFileTransfer(InputStreamReader p_in)
+    private void fillNumOfMsgInFileTransfer(byte[] p_rawMessage)
     {
-        try
+        byte[] l_numOfMsgInFileTransfer = new byte[NUM_OF_MSG_IN_FILE_TRANSFER_SIZE];
+        for(int i = 0; i < NUM_OF_MSG_IN_FILE_TRANSFER_SIZE; i++)
         {
-            char[] rawBuffer = new char[NUM_OF_MSG_IN_FILE_TRANSFER_SIZE];
-            p_in.read(rawBuffer);
-
-            String l_string = new String(rawBuffer);
-            l_string = l_string.replace("\0", "");
-            m_message.numOfMsgInFileTransfer = Integer.parseInt(l_string);
-
-            Log.d(LABEL, "numOfMsgInFileTransfer: " + m_message.numOfMsgInFileTransfer);
+            l_numOfMsgInFileTransfer[i] = p_rawMessage[i + MSG_ID_SIZE];
         }
-        catch (IOException e)
-        {
-            Log.d(LABEL, "Exception occurred during reading numOfMsgInFileTransfer: No I/O!");
-        }
+
+        String l_tempString = new String(l_numOfMsgInFileTransfer);
+        l_tempString = l_tempString.replace("\0", "");
+        m_message.numOfMsgInFileTransfer = Integer.parseInt(l_tempString);
+
+        Log.d(LABEL, "NumOfMsgInFileTransfer: " + m_message.numOfMsgInFileTransfer);
     }
 
-    private void readBytesInPayload(InputStreamReader p_in)
+    private void fillBytesInPayload(byte[] p_rawMessage)
     {
-        try
+        byte[] l_bytesInPayload = new byte[BYTES_IN_PAYLOAD_SIZE];
+        for(int i = 0; i < BYTES_IN_PAYLOAD_SIZE; i++)
         {
-            char[] rawBuffer = new char[BYTES_IN_PAYLOAD_SIZE];
-            p_in.read(rawBuffer);
-
-            String l_string = new String(rawBuffer);
-            l_string = l_string.replace("\0", "");
-            m_message.bytesInPayload = Integer.parseInt(l_string);
-
-            Log.d(LABEL, "bytesInPayload: " + m_message.bytesInPayload);
+            l_bytesInPayload[i] = p_rawMessage[i + MSG_ID_SIZE + NUM_OF_MSG_IN_FILE_TRANSFER_SIZE];
         }
-        catch (IOException e)
-        {
-            Log.d(LABEL, "Exception occurred during reading bytesInPayload: No I/O!");
-        }
+
+        String l_tempString = new String(l_bytesInPayload);
+        l_tempString = l_tempString.replace("\0", "");
+        m_message.bytesInPayload = Integer.parseInt(l_tempString);
+
+        Log.d(LABEL, "BytesInPayload: " + m_message.bytesInPayload);
     }
 
-    private void readPayload(InputStreamReader p_in)
+    private void fillPayload(byte[] p_rawMessage)
     {
-        try
+        for (int i = 0; i < PAYLOAD_SIZE; i++)
         {
-            char[] rawBuffer = new char[PAYLOAD_SIZE];
-            p_in.read(rawBuffer);
-            m_message.payload = rawBuffer;
-        }
-        catch (IOException e)
-        {
-            Log.d(LABEL, "Exception occurred during reading payload: No I/O!");
+            m_message.payloadRead[i] = p_rawMessage[i +
+                                                    MSG_ID_SIZE +
+                                                    NUM_OF_MSG_IN_FILE_TRANSFER_SIZE +
+                                                    BYTES_IN_PAYLOAD_SIZE];
         }
     }
 }

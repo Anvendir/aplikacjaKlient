@@ -9,13 +9,27 @@ public class Message
     public EMessageId msgId;
     public int numOfMsgInFileTransfer;
     public int bytesInPayload;
-    public char[] payload;
+    public char[] payloadWrite;
+    public byte[] payloadRead;
 
     public Message()
     {
         msgId = EMessageId.SERVER_TEST_FIRST_REQ;
         numOfMsgInFileTransfer = 0;
         bytesInPayload = 0;
-        payload = new char[PAYLOAD_SIZE];
+        payloadWrite = new char[PAYLOAD_SIZE];
+        payloadRead = new byte[PAYLOAD_SIZE];
+    }
+
+    public String getUsefulPayload()
+    {
+        byte[] usefulPayload = new byte[bytesInPayload];
+        for (int i = 0; i < bytesInPayload; i++)
+        {
+            usefulPayload[i] = payloadRead[i];
+        }
+
+        String l_tempString = new String(usefulPayload);
+        return l_tempString.replace("\0", "");
     }
 }
