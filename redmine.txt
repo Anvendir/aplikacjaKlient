@@ -1,3 +1,33 @@
+//27.07.2016
+
+Zrobione:
+1. Dopiac sie z obslug sieci.
+	* wyswietalnie listy dostepnych plikow w oknie otworz plik zdalnie
+	* dodanie klasy ServerFileSentHandlera
+	* dodanie klasy FileListenerCustom do przejmowania "klikiec"
+	* wersja 1.3 aplikacji
+
+Do zrobienia:
+1. Obsluga sieci.
+	* program dziala niepoprawnie gdy cofam sie po ekranie za pomoca strzalki z menu
+	* poprawic style w widoku otwierania pliku z zewnatrz
+	* usuniecie bloku historia
+	* wersja fiinalna otwierania pliku zdalnie, to jest wybor pliku DICOM prasowanie i przesylanie rezultatu
+	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
+	* dodac w ekranie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
+
+2. Zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+3. Przygotowanie ikony aplikacji
+	* wybrac jeden z prototypow, podlaczyc do aplikacji
+4. W oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+5. Dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+	* wybrac t³o - jedno lub kilka na rozne ekrany
+	* w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+	    
+7. Dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+8. Animacja w ekranie startowym powinna startowac automatycznie i  byc troche wolniejsza
+
+
 
 //26.07.2016
 

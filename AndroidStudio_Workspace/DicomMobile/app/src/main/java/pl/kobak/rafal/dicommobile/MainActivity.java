@@ -19,6 +19,7 @@ public class MainActivity extends Activity
         s_socket = new Socket();
         s_ipAddress = new String();
         s_portNumber = new String();
+        s_fileList = new String();
     }
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends Activity
     public static Socket s_socket;
     public static String s_ipAddress;
     public static String s_portNumber;
+    public static String s_fileList;
 
     private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)

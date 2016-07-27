@@ -1,39 +1,31 @@
 package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
-import android.os.Environment;
 import android.util.Log;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+
+import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
  * Created by Rafal on 2016-07-24.
  */
 public class ServerFileListHandler extends CommonHandler
 {
-    private int m_numOfMsgInFileTransfer;
     public ServerFileListHandler()
     {
         super();
-        m_numOfMsgInFileTransfer = 0;
     }
 
     @Override
     public void run()
     {
+        Log.d(LABEL, "Adress:" + MainActivity.s_ipAddress);
+        Log.d(LABEL, "PORT:" + MainActivity.s_portNumber);
         super.connectToServer();
         MessageReader l_msgReader = new MessageReader();
         l_msgReader.readMessage();
 
         sendServerSendFileListRequest();
         receiveServerSendFileListResponse();
-
-        sendServerSendFileReq();
-        receiveServerSendFileResponse();
-
-        receiveSendFileInd();
+        Log.d(LABEL, "wszystko");
     }
 
     private void sendServerSendFileListRequest()
@@ -59,34 +51,7 @@ public class ServerFileListHandler extends CommonHandler
     {
         MessageReader l_msgReader = new MessageReader();
         Message l_msg = l_msgReader.readMessage();
-
-        printReceivedMessage(l_msg);
-    }
-
-    private void sendServerSendFileReq()
-    {
-        Message l_msg = buildServerSendFileReq();
-        MessageSender l_msgSender = new MessageSender();
-        l_msgSender.send(l_msg);
-    }
-
-    private Message buildServerSendFileReq()
-    {
-        Message l_msg = new Message();
-        String l_payload = "./moduleTest/plikiPrzykladowe/prostyPlik.txt";
-        l_msg.msgId = EMessageId.SERVER_SEND_FILE_REQ;
-        l_msg.numOfMsgInFileTransfer = 0;
-        l_msg.bytesInPayload = l_payload.length();
-        l_msg.payloadWrite = l_payload.toCharArray();
-
-        return l_msg;
-    }
-
-    private void receiveServerSendFileResponse()
-    {
-        MessageReader l_msgReader = new MessageReader();
-        Message l_msg = l_msgReader.readMessage();
-        m_numOfMsgInFileTransfer = l_msg.numOfMsgInFileTransfer;
+        MainActivity.s_fileList = l_msg.getUsefulPayload();
 
         printReceivedMessage(l_msg);
     }
@@ -98,56 +63,5 @@ public class ServerFileListHandler extends CommonHandler
         Log.d(LABEL, "numOfMsgInFileTransfer: " + p_msg.numOfMsgInFileTransfer);
         Log.d(LABEL, "bytesInPayload: " + p_msg.bytesInPayload);
         Log.d(LABEL, "payload: " + p_msg.getUsefulPayload());
-    }
-
-    private void receiveSendFileInd()
-    {
-        BufferedOutputStream l_bufferedOutputStream = getBufferedOutputStream("tekstowy.txt");
-
-        try
-        {
-            receiveFile(l_bufferedOutputStream);
-            l_bufferedOutputStream.flush();
-            l_bufferedOutputStream.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
-
-    private void receiveFile(BufferedOutputStream p_bufferedOutputStream)
-            throws IOException
-    {
-        for (int j = 0; j < m_numOfMsgInFileTransfer; j++)
-        {
-            MessageReader l_msgReader = new MessageReader();
-            Message l_msg = l_msgReader.readMessage();
-
-            for (int i = 0; i < l_msg.bytesInPayload; i++)
-            {
-                p_bufferedOutputStream.write(l_msg.payloadRead[i]);
-            }
-        }
-    }
-
-    private BufferedOutputStream getBufferedOutputStream(String p_outputFileName)
-    {
-        File l_externalStorageDir = Environment.getExternalStorageDirectory();
-        File l_directory = new File(l_externalStorageDir.getAbsolutePath() + "/mojePliki");
-        l_directory.mkdirs();
-
-        File l_file = new File(l_directory, p_outputFileName);
-        FileOutputStream l_outputStream = null;
-
-        try
-        {
-            l_outputStream = new FileOutputStream(l_file);
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        return new BufferedOutputStream(l_outputStream);
     }
 }
