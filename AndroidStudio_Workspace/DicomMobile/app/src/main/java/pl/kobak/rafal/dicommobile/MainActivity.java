@@ -20,6 +20,7 @@ public class MainActivity extends Activity
         s_ipAddress = new String();
         s_portNumber = new String();
         s_fileList = new String();
+        s_chosenFileName = new String();
     }
 
     @Override
@@ -32,6 +33,7 @@ public class MainActivity extends Activity
     public static String s_ipAddress;
     public static String s_portNumber;
     public static String s_fileList;
+    public static String s_chosenFileName;
 
     private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)

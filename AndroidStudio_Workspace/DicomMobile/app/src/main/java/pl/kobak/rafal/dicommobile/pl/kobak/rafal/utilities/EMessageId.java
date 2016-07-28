@@ -14,7 +14,9 @@ public enum EMessageId
     SERVER_SEND_FILE_RESP(6),
     CLIENT_SEND_FILE_IND(7),
     SERVER_SEND_FILE_LIST_REQ(8),
-    SERVER_SEND_FILE_LIST_RESP(9);
+    SERVER_SEND_FILE_LIST_RESP(9),
+    SERVER_PARSE_DICOM_FILE_REQ(10),
+    SERVER_PARSE_DICOM_FILE_RESP(11);
 
     private final int m_value;
     private EMessageId(int p_value)

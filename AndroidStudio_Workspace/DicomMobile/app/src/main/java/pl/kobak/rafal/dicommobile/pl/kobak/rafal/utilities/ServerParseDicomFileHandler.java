@@ -5,11 +5,11 @@ import android.util.Log;
 import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
- * Created by Rafal on 2016-07-24.
+ * Created by Rafal on 2016-07-28.
  */
-public class ServerFileListHandler extends CommonHandler
+public class ServerParseDicomFileHandler extends CommonHandler
 {
-    public ServerFileListHandler()
+    public ServerParseDicomFileHandler()
     {
         super();
     }
@@ -17,28 +17,26 @@ public class ServerFileListHandler extends CommonHandler
     @Override
     public void run()
     {
-        Log.d(LABEL, "Adress:" + MainActivity.s_ipAddress);
-        Log.d(LABEL, "PORT:" + MainActivity.s_portNumber);
         super.connectToServer();
         MessageReader l_msgReader = new MessageReader();
         l_msgReader.readMessage();
 
-        sendServerSendFileListRequest();
-        receiveServerSendFileListResponse();
+        sendServerParseDicomFileReq();
+        receiveServerSendDicomFileResponse();
     }
 
-    private void sendServerSendFileListRequest()
+    private void sendServerParseDicomFileReq()
     {
-        Message l_msg = buildServerSendFileListReq();
+        Message l_msg = buildServerSendDicomFileReq();
         MessageSender l_msgSender = new MessageSender();
         l_msgSender.send(l_msg);
     }
 
-    private Message buildServerSendFileListReq()
+    private Message buildServerSendDicomFileReq()
     {
         Message l_msg = new Message();
-        String l_payload = "File list request";
-        l_msg.msgId = EMessageId.SERVER_SEND_FILE_LIST_REQ;
+        String l_payload = "./moduleTest/plikiTestyAndroid/" + MainActivity.s_chosenFileName;
+        l_msg.msgId = EMessageId.SERVER_PARSE_DICOM_FILE_REQ;
         l_msg.numOfMsgInFileTransfer = 0;
         l_msg.bytesInPayload = l_payload.length();
         l_msg.payloadWrite = l_payload.toCharArray();
@@ -46,11 +44,10 @@ public class ServerFileListHandler extends CommonHandler
         return l_msg;
     }
 
-    private void receiveServerSendFileListResponse()
+    private void receiveServerSendDicomFileResponse()
     {
         MessageReader l_msgReader = new MessageReader();
         Message l_msg = l_msgReader.readMessage();
-        MainActivity.s_fileList = l_msg.getUsefulPayload();
 
         printReceivedMessage(l_msg);
     }

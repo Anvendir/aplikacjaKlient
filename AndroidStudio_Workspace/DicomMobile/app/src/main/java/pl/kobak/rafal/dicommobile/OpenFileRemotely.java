@@ -23,19 +23,18 @@ public class OpenFileRemotely extends Activity
         Thread l_connectionThread = new Thread(new ServerFileListHandler());
         l_connectionThread.start();
 
-        while(l_connectionThread.isAlive())
-        {
-
-        }
+        while(l_connectionThread.isAlive()) {}
 
         String [] l_receivedFileList = MainActivity.s_fileList.split("\\r?\\n");
-        Log.d("Kurwa", "RazDwaTrzy: " + MainActivity.s_fileList);
         LinearLayout l_linearLayout = new LinearLayout(this);
         setContentView(l_linearLayout);
         l_linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         for( int i = 0; i < l_receivedFileList.length; i++ )
         {
+            if(l_receivedFileList[i].endsWith(".txt") || l_receivedFileList[i].endsWith(".png"))
+                continue;
+
             TextView l_textView = new TextView(this);
             l_textView.setText(l_receivedFileList[i]);
             l_textView.setClickable(true);

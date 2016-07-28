@@ -30,15 +30,4 @@
         android:background="@drawable/button"
         style="@style/buttonStyle"/>
 
-    <Button
-        android:layout_width="@dimen/buttonLanguage_width"
-        android:layout_height="@dimen/buttonLanguage_height"
-        android:text="@string/button_history"
-        android:id="@+id/button_history"
-        android:layout_below="@+id/button_openRemotely"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick_history"
-        android:background="@drawable/button"
-        style="@style/buttonStyle"/>
-
 </RelativeLayout>

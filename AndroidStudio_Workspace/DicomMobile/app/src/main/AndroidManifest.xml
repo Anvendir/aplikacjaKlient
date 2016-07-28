@@ -85,14 +85,6 @@
                 android:value="pl.kobak.rafal.dicommobile.OpenFile" />
         </activity>
         <activity
-            android:name=".History"
-            android:label="@string/title_activity_history"
-            android:parentActivityName=".OpenFile" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.kobak.rafal.dicommobile.OpenFile" />
-        </activity>
-        <activity
             android:name=".FileWindow"
             android:label="@string/title_activity_file_window"
             android:parentActivityName=".MainActivity" >

@@ -47,10 +47,4 @@ public class OpenFile extends Activity
         Intent l_openFileRemotely = new Intent(this, OpenFileRemotely.class);
         startActivity(l_openFileRemotely);
     }
-
-    public void onClick_history(View p_view)
-    {
-        Intent l_history = new Intent(this, History.class);
-        startActivity(l_history);
-    }
 }

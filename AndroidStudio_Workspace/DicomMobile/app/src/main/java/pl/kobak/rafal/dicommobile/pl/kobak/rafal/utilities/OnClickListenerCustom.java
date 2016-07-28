@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import pl.kobak.rafal.dicommobile.FileWindow;
+import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**
  * Created by Rafal on 2016-07-26.
@@ -16,13 +17,18 @@ public class OnClickListenerCustom implements View.OnClickListener
     public void onClick(View p_view)
     {
         TextView l_textView = (TextView) p_view;
-        l_textView.getText();
-        Log.d("Kurwa", "text view" +  l_textView.getText());
+        MainActivity.s_chosenFileName = l_textView.getText().toString();
+
         Intent l_openFile = new Intent(p_view.getContext(), FileWindow.class);
         p_view.getContext().startActivity(l_openFile);
 
+        Thread l_parseDicomFile_connectionThread = new Thread(new ServerParseDicomFileHandler());
+        l_parseDicomFile_connectionThread.start();
 
-        Thread l_connectionThread = new Thread(new ServerFileSentHandler());
-        l_connectionThread.start();
+        while(l_parseDicomFile_connectionThread.isAlive()) {}
+
+        Thread l_requestParsedFiles_connectionThread
+                = new Thread(new ServerFileSentHandler(MainActivity.s_chosenFileName + ".png"));
+        l_requestParsedFiles_connectionThread.start();
     }
 }

@@ -16,10 +16,12 @@ import java.io.IOException;
 public class ServerFileSentHandler extends CommonHandler
 {
     private int m_numOfMsgInFileTransfer;
-    public ServerFileSentHandler()
+    private String m_fileName;
+    public ServerFileSentHandler(String p_fileName)
     {
         super();
         m_numOfMsgInFileTransfer = 0;
+        m_fileName = p_fileName;
     }
 
     @Override
@@ -45,7 +47,7 @@ public class ServerFileSentHandler extends CommonHandler
     private Message buildServerSendFileReq()
     {
         Message l_msg = new Message();
-        String l_payload = "./moduleTest/plikiTestyAndroid/" + "Zawilec.txt";
+        String l_payload = "./moduleTest/plikiTestyAndroid/" + m_fileName;
         l_msg.msgId = EMessageId.SERVER_SEND_FILE_REQ;
         l_msg.numOfMsgInFileTransfer = 0;
         l_msg.bytesInPayload = l_payload.length();
@@ -74,7 +76,7 @@ public class ServerFileSentHandler extends CommonHandler
 
     private void receiveSendFileInd()
     {
-        BufferedOutputStream l_bufferedOutputStream = getBufferedOutputStream("tekstowy.txt");
+        BufferedOutputStream l_bufferedOutputStream = getBufferedOutputStream(m_fileName);
 
         try
         {

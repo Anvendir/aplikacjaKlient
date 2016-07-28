@@ -8,7 +8,6 @@
     <string name="title_activity_connect_to_server">Połącz z serwerem</string>
     <string name="title_activity_open_file_locally">Otwórz plik lokalnie</string>
     <string name="title_activity_open_file_remotely">Otwórz plik zdalnie</string>
-    <string name="title_activity_history">Historia</string>
     <string name="title_activity_file_window">Okno pliku</string>
     <string name="title_activity_metadata">Metadata</string>
     <string name="title_activity_about_file">AboutFile</string>
@@ -35,7 +34,6 @@
     <string name="button_german">Niemiecki</string>
     <string name="button_openRemotely">Otwórz zdalnie</string>
     <string name="button_openLocally">Otwórz lokalnie</string>
-    <string name="button_history">Historia</string>
     <string name="button_open">Otwórz</string>
     <string name="button_cancel">Anuluj</string>
     <string name="button_connect">Połącz</string>
