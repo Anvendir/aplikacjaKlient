@@ -8,10 +8,12 @@ Zrobione:
 	* usuniecie bloku historia
 	* wersja 1.4 aplikacji
 
+	* dodanie wyswietlania pobranego zdjecia w oknie FileWindow
+	* wersja 1.4.1
 Do zrobienia:
 
 1. Funkcjonalne.
-	* dodanie wyswietlania pobranego zdjecia w oknie FileWindow
+	* usuniecie plikow DICOM ktore sie nie wyswietlaja
 	* dodanie wyswietlania pobranych danych o pacjencie w oknie Metadata
 	* dodac w ekranie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
 	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka

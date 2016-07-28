@@ -2,17 +2,38 @@ package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import java.io.File;
 
 public class FileWindow extends Activity
 {
+    protected String LABEL = this.getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_window);
+
+        ImageView l_imageView = (ImageView) this.findViewById(R.id.ImageView);
+        String l_rootPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        String l_path = l_rootPath + File.separator + "mojePliki" + File.separator + MainActivity.s_chosenFileName + ".png";
+        Log.d(LABEL, l_path);
+
+        Bitmap l_bmp = BitmapFactory.decodeFile(l_path);
+        if(l_bmp == null)
+        {
+            Log.d(LABEL, "Nie udalo sie wczytac pliku: " + MainActivity.s_chosenFileName + ".png !");
+        }
+        l_imageView.setImageBitmap(l_bmp);
     }
 
     @Override

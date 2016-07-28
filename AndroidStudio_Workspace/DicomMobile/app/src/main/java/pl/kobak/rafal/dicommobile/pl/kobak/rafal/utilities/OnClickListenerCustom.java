@@ -30,5 +30,6 @@ public class OnClickListenerCustom implements View.OnClickListener
         Thread l_requestParsedFiles_connectionThread
                 = new Thread(new ServerFileSentHandler(MainActivity.s_chosenFileName + ".png"));
         l_requestParsedFiles_connectionThread.start();
+        while(l_requestParsedFiles_connectionThread.isAlive()) {}
     }
 }
