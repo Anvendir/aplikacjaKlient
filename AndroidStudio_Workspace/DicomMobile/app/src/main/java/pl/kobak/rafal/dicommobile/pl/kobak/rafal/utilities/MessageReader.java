@@ -43,7 +43,8 @@ public class MessageReader
         }
         catch (IOException e)
         {
-            Log.d(LABEL, "Exception occurred in read message: No I/O!");
+            Log.d(LABEL + "_exception", e.getMessage());
+            Log.d(LABEL + "_exception", "Exception occurred in read message: No I/O!");
         }
 
         return m_message;

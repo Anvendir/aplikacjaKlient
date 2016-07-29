@@ -86,6 +86,7 @@ public class ServerFileSentHandler extends CommonHandler
         }
         catch (IOException e)
         {
+            Log.d(LABEL + "_exception", e.getMessage());
             e.printStackTrace();
         }
     }
@@ -120,6 +121,7 @@ public class ServerFileSentHandler extends CommonHandler
         }
         catch (FileNotFoundException e)
         {
+            Log.d(LABEL + "_exception", e.getMessage());
             e.printStackTrace();
         }
         return new BufferedOutputStream(l_outputStream);

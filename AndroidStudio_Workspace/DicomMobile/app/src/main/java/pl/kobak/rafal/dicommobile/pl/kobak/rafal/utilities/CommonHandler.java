@@ -41,15 +41,18 @@ public class CommonHandler implements Runnable
         }
         catch (UnknownHostException e)
         {
-            Log.d(LABEL, "Exception occurred: Unknown host: " + m_serverIp + "!");
+            Log.d(LABEL + "_exception", "Exception occurred: Unknown host: " + m_serverIp + "!");
+            Log.d(LABEL + "_exception", e.getMessage());
         }
         catch (IOException e)
         {
-            Log.d(LABEL, "Exception occurred: No I/O!");
+            Log.d(LABEL + "_exception", "Exception occurred: No I/O!");
+            Log.d(LABEL + "_exception", e.getMessage());
         }
         catch (Exception e)
         {
-            Log.d(LABEL, "Unknown exception occurred!");
+            Log.d(LABEL + "_exception", "Unknown exception occurred!");
+            Log.d(LABEL + "_exception", e.getMessage());
         }
     }
 }

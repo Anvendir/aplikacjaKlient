@@ -1,3 +1,32 @@
+//29.07.2016
+
+Zrobione:
+
+Do zrobienia:
+	* usuniecie plikow DICOM ktore sie nie wyswietlaja
+	* dodanie wyswietlania pobranych danych o pacjencie w oknie Metadata
+
+1. Funkcjonalne.
+	* dodac w ekranie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
+	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
+	* przygotowanie tekstow o DICOM
+	* tlumaczenia na angielski
+	* tlumaczenie na polski
+2. Wyglad aplikacji
+	* poprawic style w widoku otwierania pliku z remoteFile
+	* przygotowanie ikony aplikacji
+		- wybrac jeden z prototypow, podlaczyc do aplikacji
+	* oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+	* dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+		- wybrac t³o - jedno lub kilka na rozne ekrany
+		- w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+3. Refactor
+	* program dziala niepoprawnie gdy cofam sie po ekranie za pomoca strzalki z menu
+	* zrobic dodawania tesktu z pliku zamiast definicji wewnatrz aplikacji (ekrany o Dicom, o aplikajci)
+	* dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+	* animacja w ekranie startowym powinna startowac automatycznie i  byc troche wolniejsza
+
+
 //28.07.2016
 
 Zrobione:

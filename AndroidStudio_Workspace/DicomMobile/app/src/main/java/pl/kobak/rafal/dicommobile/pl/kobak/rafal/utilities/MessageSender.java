@@ -50,7 +50,7 @@ public class MessageSender
         }
         catch (IOException e)
         {
-            Log.d(LABEL, "Exception in message sender!" + e.getMessage());
+            Log.d(LABEL + "_exception", "Exception in message sender!" + e.getMessage());
         }
     }
 
