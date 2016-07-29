@@ -10,6 +10,7 @@
 
     <TextView
         android:text="@string/text_aboutDicom"
+        android:id="@+id/aboutDicomTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
