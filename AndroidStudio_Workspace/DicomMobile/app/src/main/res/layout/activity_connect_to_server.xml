@@ -73,4 +73,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_welcomeMessage"
+        android:id="@+id/welcomeMessageTextView"
+        android:layout_above="@+id/ipAddressTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"/>
+
 </RelativeLayout>

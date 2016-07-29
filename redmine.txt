@@ -1,13 +1,14 @@
 //29.07.2016
 
 Zrobione:
-
-Do zrobienia:
 	* usuniecie plikow DICOM ktore sie nie wyswietlaja
 	* dodanie wyswietlania pobranych danych o pacjencie w oknie Metadata
+	* wersja 1.4.2 aplikacji
 
-1. Funkcjonalne.
 	* dodac w ekranie polacz z serwerem wyswietlenie wiadomosci otrzymanej przez serwer
+	* wersja 1.5 aplikacji
+Do zrobienia:
+1. Funkcjonalne.
 	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
 	* przygotowanie tekstow o DICOM
 	* tlumaczenia na angielski

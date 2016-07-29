@@ -21,6 +21,7 @@ public class MainActivity extends Activity
         s_portNumber = new String();
         s_fileList = new String();
         s_chosenFileName = new String();
+        s_welcomeMessage = new String();
     }
 
     @Override
@@ -34,6 +35,7 @@ public class MainActivity extends Activity
     public static String s_portNumber;
     public static String s_fileList;
     public static String s_chosenFileName;
+    public static String s_welcomeMessage;
 
     private boolean m_isMovement = false;
     public void onClickMainAnimation(View p_view)

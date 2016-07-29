@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ConnectToServer extends Activity
 {
@@ -75,6 +76,10 @@ public class ConnectToServer extends Activity
 
         Thread l_connectionThread = new Thread(new ServerConnectionHandler());
         l_connectionThread.start();
+        while(l_connectionThread.isAlive()) {}
+
+        TextView l_textView = (TextView) this.findViewById(R.id.welcomeMessageTextView);
+        l_textView.setText(MainActivity.s_welcomeMessage);
     }
 
     public void onClick_clear(View p_view)

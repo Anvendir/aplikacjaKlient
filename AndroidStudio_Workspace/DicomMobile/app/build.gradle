@@ -8,8 +8,8 @@ android {
         applicationId "pl.kobak.rafal.dicommobile"
         minSdkVersion 16
         targetSdkVersion 20
-        versionCode 7
-        versionName "1.4.2"
+        versionCode 8
+        versionName "1.5"
     }
     buildTypes {
         release {

@@ -2,6 +2,8 @@ package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
 import android.util.Log;
 
+import pl.kobak.rafal.dicommobile.MainActivity;
+
 /**
  * Created by Rafal on 2016-05-13.
  */
@@ -20,6 +22,7 @@ public class ServerConnectionHandler extends CommonHandler
         Message l_msg = l_msgReader.readMessage();
 
         printWelcomeMessage(l_msg);
+        MainActivity.s_welcomeMessage = l_msg.getUsefulPayload();
     }
 
     private void printWelcomeMessage(Message p_msg)

@@ -41,6 +41,7 @@
 
     <string name="textView_ipAddress">Adres ip:</string>
     <string name="textView_portNumber">Numer portu:</string>
+    <string name="textView_welcomeMessage">Wiadomosc powitalna</string>
 
     <string name="hint_ipAddress">192.168.255.1</string>
     <string name="hint_portNumber">8888</string>
