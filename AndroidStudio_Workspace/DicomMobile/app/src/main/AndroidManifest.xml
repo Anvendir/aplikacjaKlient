@@ -47,14 +47,6 @@
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
         </activity>
         <activity
-            android:name=".Settings"
-            android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.kobak.rafal.dicommobile.MainActivity" />
-        </activity>
-        <activity
             android:name=".OpenFile"
             android:label="@string/title_activity_open_file"
             android:parentActivityName=".MainActivity" >
@@ -69,14 +61,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.kobak.rafal.dicommobile.MainActivity" />
-        </activity>
-        <activity
-            android:name=".OpenFileLocally"
-            android:label="@string/title_activity_open_file_locally"
-            android:parentActivityName=".OpenFile" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.kobak.rafal.dicommobile.OpenFile" />
         </activity>
         <activity
             android:name=".OpenFileRemotely"
@@ -97,22 +81,6 @@
         <activity
             android:name=".Metadata"
             android:label="@string/title_activity_metadata"
-            android:parentActivityName=".FileWindow" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
-        </activity>
-        <activity
-            android:name=".AboutFile"
-            android:label="@string/title_activity_about_file"
-            android:parentActivityName=".FileWindow" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="pl.kobak.rafal.dicommobile.FileWindow" />
-        </activity>
-        <activity
-            android:name=".FullMetadata"
-            android:label="@string/title_activity_full_metadata"
             android:parentActivityName=".FileWindow" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

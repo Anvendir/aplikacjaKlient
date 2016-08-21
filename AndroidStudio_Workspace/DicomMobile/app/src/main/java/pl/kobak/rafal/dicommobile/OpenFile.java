@@ -26,20 +26,7 @@ public class OpenFile extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings)
-        {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onClick_openFileLocally(View p_view)
-    {
-        Intent l_openFileLocally = new Intent(this, OpenFileLocally.class);
-        startActivity(l_openFileLocally);
     }
 
     public void onClick_openFileRemotely(View p_view)

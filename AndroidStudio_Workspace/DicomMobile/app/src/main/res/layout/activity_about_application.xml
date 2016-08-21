@@ -6,11 +6,13 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="pl.kobak.rafal.dicommobile.AboutApplication">
+                tools:context="pl.kobak.rafal.dicommobile.AboutApplication"
+                android:background="@drawable/ogolny2">
 
     <TextView
         android:text="@string/text_aboutApp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        style="@style/plainTextStyle"/>
 
 </RelativeLayout>

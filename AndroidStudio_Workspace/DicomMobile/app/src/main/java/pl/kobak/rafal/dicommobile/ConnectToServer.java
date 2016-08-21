@@ -39,13 +39,6 @@ public class ConnectToServer extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem p_item)
     {
-        int l_id = p_item.getItemId();
-
-        if (l_id == R.id.action_settings)
-        {
-            return true;
-        }
-
         return super.onOptionsItemSelected(p_item);
     }
 

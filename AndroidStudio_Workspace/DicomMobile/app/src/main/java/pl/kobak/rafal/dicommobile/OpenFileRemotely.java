@@ -1,8 +1,11 @@
 package pl.kobak.rafal.dicommobile;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,7 +43,11 @@ public class OpenFileRemotely extends Activity
             l_textView.setClickable(true);
             l_linearLayout.addView(l_textView);
             l_textView.setOnClickListener(new OnClickListenerCustom());
+            l_textView.setTextSize(getResources().getDimension(R.dimen.text_on_list));
+            l_textView.setGravity(Gravity.CENTER);
+            l_textView.setTypeface(Typeface.DEFAULT_BOLD);
         }
+        getWindow().getDecorView().setBackgroundResource(R.drawable.ogolny2);
     }
 
     @Override
@@ -53,13 +60,6 @@ public class OpenFileRemotely extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings)
-        {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

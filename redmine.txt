@@ -1,3 +1,27 @@
+//21.08.2016
+
+Zrobione:
+  1. Dolozyc tlo do ekranow aplikacji, cos z wybrancyh
+	- wybrac t³o - jedno lub kilka na rozne ekrany
+	- w photoshopie zrobic rozdzielczosc zarowno dla poziomu jak i dla pionu
+  2. Poprawic style w widoku otwierania pliku z remoteFile, o aplikacji o Dicom, metadata
+  3. Przygotowanie ikony aplikacji
+	- wybrac jeden z prototypow, podlaczyc do aplikacji
+
+Do zrobienia:
+1. Funkcjonalne.
+	* dodac kontorlke informujaca o polaczeniu z serwerem, jakas zielona lampka
+	* tlumaczenia na angielski
+	* tlumaczenie na polski
+	* zrobic cos zeby nie wywalalo gdy klikne na otworz plik a nie ma polaczenia z serweram
+	* automatyczne nawiazywanie oplaczenia z serwerem gdy otwarcie pliku sie nie powiodlo
+2. Wyglad aplikacji
+	* oknie glownym aplikacji dolozyc jakas grafike z boku cokolwiek, jako ze wyglada to troche pusta, szczegolnie w poziomym widoku
+3. Refactor
+	* program dziala niepoprawnie gdy cofam sie po ekranie za pomoca strzalki z menu
+	* dla jezykow, jako tlo wybrane w punkcie 4, natomiast animacje z kolorami w jezykach przeniesc do tla przyciskow
+	* animacja w ekranie startowym powinna startowac automatycznie i byc troche wolniejsza
+
 //29.07.2016
 
 Zrobione:

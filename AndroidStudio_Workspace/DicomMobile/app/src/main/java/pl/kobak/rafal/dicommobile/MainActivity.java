@@ -98,12 +98,6 @@ public class MainActivity extends Activity
             return true;
         }
 
-        if(l_id == R.id.action_settings)
-        {
-            Intent l_settings = new Intent(this, Settings.class);
-            startActivity(l_settings);
-            return true;
-        }
         if(l_id == R.id.action_quit)
         {
             finish();

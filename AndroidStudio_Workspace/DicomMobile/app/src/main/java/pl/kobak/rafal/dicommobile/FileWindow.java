@@ -57,16 +57,6 @@ public class FileWindow extends Activity
             onClick_metadata();
             return true;
         }
-        else if (l_id == R.id.action_aboutFile)
-        {
-            onClick_aboutFile();
-            return true;
-        }
-        else if (l_id == R.id.action_fullMetaData)
-        {
-            onClick_fullMetadata();
-            return true;
-        }
         else if (l_id == R.id.action_render)
         {
             onClick_rendering();
@@ -78,18 +68,6 @@ public class FileWindow extends Activity
     public void onClick_metadata()
     {
         Intent l_intent = new Intent(this, Metadata.class);
-        startActivity(l_intent);
-    }
-
-    public void onClick_aboutFile()
-    {
-        Intent l_intent = new Intent(this, AboutFile.class);
-        startActivity(l_intent);
-    }
-
-    public void onClick_fullMetadata()
-    {
-        Intent l_intent = new Intent(this, FullMetadata.class);
         startActivity(l_intent);
     }
 

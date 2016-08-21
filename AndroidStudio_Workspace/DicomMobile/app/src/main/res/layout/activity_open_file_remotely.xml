@@ -7,7 +7,8 @@
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context="pl.kobak.rafal.dicommobile.OpenFileRemotely"
-                android:onClick="onClick_cancel">
+                android:onClick="onClick_cancel"
+                android:background="@drawable/ogolny2">
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,9 +23,12 @@
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/ogolny2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/button_openFileRemotelyOpen"/>
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:layout_width="wrap_content"

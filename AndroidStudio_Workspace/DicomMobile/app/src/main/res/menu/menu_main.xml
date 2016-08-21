@@ -27,11 +27,6 @@
           android:orderInCategory="20"
           android:showAsAction="never" />
 
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="300"
-          android:showAsAction="never" />
-
     <item android:id="@+id/action_quit"
           android:title="@string/action_quit"
           android:orderInCategory="400"
