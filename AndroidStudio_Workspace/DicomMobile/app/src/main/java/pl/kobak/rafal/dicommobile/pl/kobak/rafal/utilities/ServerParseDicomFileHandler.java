@@ -1,7 +1,6 @@
 package pl.kobak.rafal.dicommobile.pl.kobak.rafal.utilities;
 
 import android.util.Log;
-
 import pl.kobak.rafal.dicommobile.MainActivity;
 
 /**

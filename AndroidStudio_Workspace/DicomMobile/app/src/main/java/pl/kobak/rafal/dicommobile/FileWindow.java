@@ -25,13 +25,15 @@ public class FileWindow extends Activity
 
         ImageView l_imageView = (ImageView) this.findViewById(R.id.ImageView);
         String l_rootPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        String l_path = l_rootPath + File.separator + "mojePliki" + File.separator + MainActivity.s_chosenFileName + ".png";
+        String l_path = l_rootPath + File.separator + "mojePliki"
+                        + File.separator + MainActivity.s_chosenFileName + ".png";
         Log.d(LABEL, l_path);
 
         Bitmap l_bmp = BitmapFactory.decodeFile(l_path);
         if(l_bmp == null)
         {
-            Log.d(LABEL, "Nie udalo sie wczytac pliku: " + MainActivity.s_chosenFileName + ".png !");
+            Log.d(LABEL, "Nie udalo sie wczytac pliku: "
+                        + MainActivity.s_chosenFileName + ".png !");
         }
         l_imageView.setImageBitmap(l_bmp);
     }

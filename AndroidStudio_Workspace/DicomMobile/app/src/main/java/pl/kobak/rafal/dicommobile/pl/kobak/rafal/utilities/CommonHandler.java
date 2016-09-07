@@ -36,8 +36,8 @@ public class CommonHandler implements Runnable
             MainActivity.s_socket = new Socket(l_serverAddress, m_serverPort);
 
             Log.d(LABEL, "Connection with " + m_serverIp +
-                         " in port " + m_serverPort +
-                         " successfully established.");
+                    " in port " + m_serverPort +
+                    " successfully established.");
         }
         catch (UnknownHostException e)
         {
